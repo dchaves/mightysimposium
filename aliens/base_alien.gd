@@ -86,4 +86,4 @@ func _fixed_process(delta):
 		self.get_node("player").play(movement)
 		
 func _on_fade_effect_tween_complete( object, key ):
-	queue_free()
+	self.queue_free()

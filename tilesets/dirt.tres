@@ -29,57 +29,57 @@ points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
 custom_solver_bias = 0.0
 points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -64, 64, -64, -64, 64, 64 )
 
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
+
 [sub_resource type="ConvexPolygonShape2D" id=6]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -64, -64, 64, -64, 64, 64, -64, 64 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -64, -64, 64, -64, 64, -21, -64, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -64, -64, 64, -64, 64, 64, -64, -21 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 64, 64, 35.1238, 60.7303, 0.0509033, 51.6044, -15.0085, 45.7207, -30.6842, 37.0078, -44.5776, 25.1574, -52.7645, 14.1655, -58.6406, 3.30553, -62.7887, -8.72758, -64, -21, -64, -64, 64, -64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, -64, 64, -64, 64, -21, -64, 64 )
+points = Vector2Array( -64, -64, 64, -64, 64, -21, 62.7887, -8.72758, 58.6406, 3.30553, 52.7645, 14.1655, 44.5776, 25.1574, 30.6842, 37.0078, 15.0085, 45.7207, -6.30518, 54.1261, -35.1238, 60.7303, -64, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, -64, 64, -64, 64, -21, 62.7887, -8.72758, 58.6406, 3.30553, 52.7645, 14.1655, 44.5776, 25.1574, 30.6842, 37.0078, 15.0085, 45.7207, -6.30518, 54.1261, -35.1238, 60.7303, -64, 64 )
+points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, -64, 64, -64, 64, -21, 62.7887, -8.72758, 58.6406, 3.30553, 52.7645, 14.1655, 44.5776, 25.1574, 30.6842, 37.0078, 15.0085, 45.7207, -6.30518, 54.1261, -35.1238, 60.7303, -64, 64 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 64, 64, -64, 64, -64, -64, 64, -64 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-
-custom_solver_bias = 0.0
 points = Vector2Array( -64, -64, 64, -64, 64, 10, -64, 10 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 64, -64, 64, 64, -64, 64 )
@@ -116,7 +116,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 2/occluder_offset = Vector2( 64, 64 )
 2/navigation_offset = Vector2( 64, 64 )
 2/shape_offset = Vector2( 64, 64 )
-2/shapes = [ SubResource( 3 ) ]
+2/shapes = [ SubResource( 11 ) ]
 2/one_way_collision_direction = Vector2( 0, 0 )
 2/one_way_collision_max_depth = 0.0
 3/name = "alone_platform"
@@ -127,7 +127,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 3/occluder_offset = Vector2( 64, 64 )
 3/navigation_offset = Vector2( 64, 64 )
 3/shape_offset = Vector2( 64, 64 )
-3/shapes = [ SubResource( 8 ) ]
+3/shapes = [ SubResource( 6 ) ]
 3/one_way_collision_direction = Vector2( 0, 0 )
 3/one_way_collision_max_depth = 0.0
 4/name = "half_alone_platform"
@@ -138,7 +138,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 4/occluder_offset = Vector2( 64, 64 )
 4/navigation_offset = Vector2( 64, 64 )
 4/shape_offset = Vector2( 64, 64 )
-4/shapes = [ SubResource( 13 ) ]
+4/shapes = [ SubResource( 12 ) ]
 4/one_way_collision_direction = Vector2( 0, 0 )
 4/one_way_collision_max_depth = 0.0
 5/name = "half_left_platform"
@@ -149,7 +149,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 5/occluder_offset = Vector2( 64, 64 )
 5/navigation_offset = Vector2( 64, 64 )
 5/shape_offset = Vector2( 64, 64 )
-5/shapes = [ SubResource( 13 ) ]
+5/shapes = [ SubResource( 12 ) ]
 5/one_way_collision_direction = Vector2( 0, 0 )
 5/one_way_collision_max_depth = 0.0
 6/name = "half_right_platform"
@@ -160,7 +160,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 6/occluder_offset = Vector2( 64, 64 )
 6/navigation_offset = Vector2( 64, 64 )
 6/shape_offset = Vector2( 64, 64 )
-6/shapes = [ SubResource( 13 ) ]
+6/shapes = [ SubResource( 12 ) ]
 6/one_way_collision_direction = Vector2( 0, 0 )
 6/one_way_collision_max_depth = 0.0
 7/name = "half_center_platform"
@@ -171,7 +171,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 7/occluder_offset = Vector2( 64, 64 )
 7/navigation_offset = Vector2( 64, 64 )
 7/shape_offset = Vector2( 64, 64 )
-7/shapes = [ SubResource( 13 ) ]
+7/shapes = [ SubResource( 12 ) ]
 7/one_way_collision_direction = Vector2( 0, 0 )
 7/one_way_collision_max_depth = 0.0
 8/name = "alone_platform_noborder"
@@ -182,7 +182,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 8/occluder_offset = Vector2( 64, 64 )
 8/navigation_offset = Vector2( 64, 64 )
 8/shape_offset = Vector2( 64, 64 )
-8/shapes = [ SubResource( 8 ) ]
+8/shapes = [ SubResource( 6 ) ]
 8/one_way_collision_direction = Vector2( 0, 0 )
 8/one_way_collision_max_depth = 0.0
 9/name = "ramp_up"
@@ -193,7 +193,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 9/occluder_offset = Vector2( 64, 64 )
 9/navigation_offset = Vector2( 64, 64 )
 9/shape_offset = Vector2( 64, 64 )
-9/shapes = [ SubResource( 4 ) ]
+9/shapes = [ SubResource( 13 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
 10/name = "ramp_down"
@@ -204,7 +204,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 10/occluder_offset = Vector2( 64, 64 )
 10/navigation_offset = Vector2( 64, 64 )
 10/shape_offset = Vector2( 64, 64 )
-10/shapes = [ SubResource( 5 ) ]
+10/shapes = [ SubResource( 3 ) ]
 10/one_way_collision_direction = Vector2( 0, 0 )
 10/one_way_collision_max_depth = 0.0
 11/name = "filled_block"
@@ -215,7 +215,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 11/occluder_offset = Vector2( 64, 64 )
 11/navigation_offset = Vector2( 64, 64 )
 11/shape_offset = Vector2( 64, 64 )
-11/shapes = [ SubResource( 6 ) ]
+11/shapes = [ SubResource( 4 ) ]
 11/one_way_collision_direction = Vector2( 0, 0 )
 11/one_way_collision_max_depth = 0.0
 12/name = "filled_block_left_corner"
@@ -226,7 +226,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 12/occluder_offset = Vector2( 64, 64 )
 12/navigation_offset = Vector2( 64, 64 )
 12/shape_offset = Vector2( 64, 64 )
-12/shapes = [ SubResource( 7 ) ]
+12/shapes = [ SubResource( 5 ) ]
 12/one_way_collision_direction = Vector2( 0, 0 )
 12/one_way_collision_max_depth = 0.0
 13/name = "filled_block_right_corner"
@@ -237,7 +237,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 13/occluder_offset = Vector2( 64, 64 )
 13/navigation_offset = Vector2( 64, 64 )
 13/shape_offset = Vector2( 64, 64 )
-13/shapes = [ SubResource( 8 ) ]
+13/shapes = [ SubResource( 6 ) ]
 13/one_way_collision_direction = Vector2( 0, 0 )
 13/one_way_collision_max_depth = 0.0
 14/name = "right_cliff"
@@ -248,7 +248,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 14/occluder_offset = Vector2( 64, 64 )
 14/navigation_offset = Vector2( 64, 64 )
 14/shape_offset = Vector2( 64, 64 )
-14/shapes = [ SubResource( 9 ) ]
+14/shapes = [ SubResource( 7 ) ]
 14/one_way_collision_direction = Vector2( 0, 0 )
 14/one_way_collision_max_depth = 0.0
 15/name = "left_cliff"
@@ -259,7 +259,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 15/occluder_offset = Vector2( 64, 64 )
 15/navigation_offset = Vector2( 64, 64 )
 15/shape_offset = Vector2( 64, 64 )
-15/shapes = [ SubResource( 10 ) ]
+15/shapes = [ SubResource( 8 ) ]
 15/one_way_collision_direction = Vector2( 0, 0 )
 15/one_way_collision_max_depth = 0.0
 16/name = "left_cliff_round"
@@ -270,7 +270,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 16/occluder_offset = Vector2( 64, 64 )
 16/navigation_offset = Vector2( 64, 64 )
 16/shape_offset = Vector2( 64, 64 )
-16/shapes = [ SubResource( 11 ) ]
+16/shapes = [ SubResource( 9 ) ]
 16/one_way_collision_direction = Vector2( 0, 0 )
 16/one_way_collision_max_depth = 0.0
 17/name = "right_cliff_round"
@@ -281,7 +281,7 @@ points = Vector2Array( 64, -64, 64, 64, -64, 64 )
 17/occluder_offset = Vector2( 64, 64 )
 17/navigation_offset = Vector2( 64, 64 )
 17/shape_offset = Vector2( 64, 64 )
-17/shapes = [ SubResource( 12 ) ]
+17/shapes = [ SubResource( 10 ) ]
 17/one_way_collision_direction = Vector2( 0, 0 )
 17/one_way_collision_max_depth = 0.0
 

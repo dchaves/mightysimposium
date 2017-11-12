@@ -57,12 +57,12 @@ points = Vector2Array( -64, -64, 64, -64, 64, -21, -64, 64 )
 [sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, -64, 64, -64, 64, -21, -64, 64 )
+points = Vector2Array( -64, -64, 64, -64, 64, 64, -64, -21 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, -64, 64, -64, 64, -21, 62.7887, -8.72758, 58.6406, 3.30553, 52.7645, 14.1655, 44.5776, 25.1574, 30.6842, 37.0078, 15.0085, 45.7207, -6.30518, 54.1261, -35.1238, 60.7303, -64, 64 )
+points = Vector2Array( 64, 64, 35.1238, 60.7303, 0.0509033, 51.6044, -15.0085, 45.7207, -30.6842, 37.0078, -44.5776, 25.1574, -52.7645, 14.1655, -58.6406, 3.30553, -62.7887, -8.72758, -64, -21, -64, -64, 64, -64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 
