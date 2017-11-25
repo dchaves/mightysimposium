@@ -196,7 +196,6 @@ trigger = false
 
 [node name="half_alone_platform" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 480, 32 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
@@ -209,6 +208,8 @@ shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
+one_way_collision/direction = Vector2( 0, 1 )
+one_way_collision/max_depth = 80.0
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -223,7 +224,6 @@ trigger = false
 
 [node name="half_left_platform" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 512, 32 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 6 )
@@ -236,6 +236,8 @@ shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
+one_way_collision/direction = Vector2( 0, 1 )
+one_way_collision/max_depth = 80.0
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -250,7 +252,6 @@ trigger = false
 
 [node name="half_right_platform" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 544, 32 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
@@ -263,6 +264,8 @@ shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
+one_way_collision/direction = Vector2( 0, 1 )
+one_way_collision/max_depth = 80.0
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -289,6 +292,8 @@ shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
+one_way_collision/direction = Vector2( 0, 1 )
+one_way_collision/max_depth = 80.0
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
