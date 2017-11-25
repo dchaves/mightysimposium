@@ -33,7 +33,7 @@ func _fixed_process(delta):
 		all_aliens_do(sequence[index][0], sequence[index][1])
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("main.tscn")
+	game_state.next_level(self)
 
 func _input(event):
 	if (Input.is_action_pressed("ui_accept")):

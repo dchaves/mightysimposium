@@ -1,17 +1,16 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=12 format=1]
 
-[ext_resource path="res://title.gd" type="Script" id=1]
+[ext_resource path="res://levels/title.gd" type="Script" id=1]
 [ext_resource path="res://buttons/blueSheet.blue_button01.atex" type="Texture" id=2]
 [ext_resource path="res://buttons/blueSheet.blue_button00.atex" type="Texture" id=3]
-[ext_resource path="res://buttons.gd" type="Script" id=4]
-[ext_resource path="res://fonts/kenpixel.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://tilesets/snow.tres" type="TileSet" id=6]
-[ext_resource path="res://aliens/red_alien.tscn" type="PackedScene" id=7]
-[ext_resource path="res://aliens/green_alien.tscn" type="PackedScene" id=8]
-[ext_resource path="res://aliens/yellow_alien.tscn" type="PackedScene" id=9]
-[ext_resource path="res://aliens/grey_alien.tscn" type="PackedScene" id=10]
-[ext_resource path="res://aliens/blue_alien.tscn" type="PackedScene" id=11]
-[ext_resource path="res://music/MightyLD36_slow_1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://fonts/kenpixel.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://tilesets/snow.tres" type="TileSet" id=5]
+[ext_resource path="res://aliens/red_alien.tscn" type="PackedScene" id=6]
+[ext_resource path="res://aliens/green_alien.tscn" type="PackedScene" id=7]
+[ext_resource path="res://aliens/yellow_alien.tscn" type="PackedScene" id=8]
+[ext_resource path="res://aliens/grey_alien.tscn" type="PackedScene" id=9]
+[ext_resource path="res://aliens/blue_alien.tscn" type="PackedScene" id=10]
+[ext_resource path="res://music/MightyLD36_slow_1.ogg" type="AudioStream" id=11]
 
 [node name="root" type="Node"]
 
@@ -35,7 +34,6 @@ textures/pressed = ExtResource( 2 )
 textures/hover = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
-script/script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="TextureButton"]
 
@@ -47,7 +45,7 @@ margin/left = 70.0
 margin/top = 10.0
 margin/right = 130.0
 margin/bottom = 28.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "Start"
 uppercase = true
 percent_visible = 1.0
@@ -57,7 +55,7 @@ max_lines_visible = -1
 [node name="TileMap" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 5 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -72,27 +70,27 @@ collision/mask = 1
 occluder/light_mask = 1
 tile_data = IntArray( 589823, 1, 524289, 1, 524291, 1, 524293, 1, 524295, 1, 524297, 1, 524299, 1, 524301, 1, 524303, 1 )
 
-[node name="red_alien" parent="." instance=ExtResource( 7 )]
+[node name="red_alien" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 256, 384 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="green_alien" parent="." instance=ExtResource( 8 )]
+[node name="green_alien" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 384, 384 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="yellow_alien" parent="." instance=ExtResource( 9 )]
+[node name="yellow_alien" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 512, 384 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="grey_alien" parent="." instance=ExtResource( 10 )]
+[node name="grey_alien" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 640, 384 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="blue_alien" parent="." instance=ExtResource( 11 )]
+[node name="blue_alien" parent="." instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 768, 384 )
 transform/scale = Vector2( 1, 1 )
@@ -113,7 +111,7 @@ margin/left = 366.0
 margin/top = 251.0
 margin/right = 224.0
 margin/bottom = 233.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_shadow = Color( 0.611765, 0.45098, 0.682353, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -127,7 +125,7 @@ max_lines_visible = -1
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 12 )
+stream/stream = ExtResource( 11 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
