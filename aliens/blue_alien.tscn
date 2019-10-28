@@ -1,0 +1,838 @@
+[gd_scene load_steps=55 format=1]
+
+[ext_resource path="res://aliens/blue_alien.gd" type="Script" id=1]
+[ext_resource path="res://players/spritesheet_players.alienBlue_climb1.atex" type="Texture" id=2]
+[ext_resource path="res://players/spritesheet_players.alienBlue_climb2.atex" type="Texture" id=3]
+[ext_resource path="res://players/spritesheet_players.alienBlue_hit.atex" type="Texture" id=4]
+[ext_resource path="res://players/spritesheet_players.alienBlue_duck.atex" type="Texture" id=5]
+[ext_resource path="res://players/spritesheet_players.alienBlue_swim1.atex" type="Texture" id=6]
+[ext_resource path="res://players/spritesheet_players.alienBlue_swim2.atex" type="Texture" id=7]
+[ext_resource path="res://players/spritesheet_players.alienBlue_front.atex" type="Texture" id=8]
+[ext_resource path="res://players/spritesheet_players.alienBlue_stand.atex" type="Texture" id=9]
+[ext_resource path="res://players/spritesheet_players.alienBlue_walk1.atex" type="Texture" id=10]
+[ext_resource path="res://players/spritesheet_players.alienBlue_walk2.atex" type="Texture" id=11]
+[ext_resource path="res://sound/all_your_flag.smp" type="Sample" id=12]
+[ext_resource path="res://sound/arg.smp" type="Sample" id=13]
+[ext_resource path="res://sound/choco.smp" type="Sample" id=14]
+[ext_resource path="res://sound/dead_squares.smp" type="Sample" id=15]
+[ext_resource path="res://sound/death_1.smp" type="Sample" id=16]
+[ext_resource path="res://sound/en_taro_square_2.smp" type="Sample" id=17]
+[ext_resource path="res://sound/explosion.smp" type="Sample" id=18]
+[ext_resource path="res://sound/fall_1.smp" type="Sample" id=19]
+[ext_resource path="res://sound/flag_1.smp" type="Sample" id=20]
+[ext_resource path="res://sound/goal_1.smp" type="Sample" id=21]
+[ext_resource path="res://sound/hadouken.smp" type="Sample" id=22]
+[ext_resource path="res://sound/hasta_la_vista.smp" type="Sample" id=23]
+[ext_resource path="res://sound/hit1.smp" type="Sample" id=24]
+[ext_resource path="res://sound/hit2.smp" type="Sample" id=25]
+[ext_resource path="res://sound/i_am_your_square_2.smp" type="Sample" id=26]
+[ext_resource path="res://sound/james_square.smp" type="Sample" id=27]
+[ext_resource path="res://sound/jump_1.smp" type="Sample" id=28]
+[ext_resource path="res://sound/kippee_ya_kai_2.smp" type="Sample" id=29]
+[ext_resource path="res://sound/kippee_yi_kay.smp" type="Sample" id=30]
+[ext_resource path="res://sound/more_squares.smp" type="Sample" id=31]
+[ext_resource path="res://sound/my_square.smp" type="Sample" id=32]
+[ext_resource path="res://sound/powerup.smp" type="Sample" id=33]
+[ext_resource path="res://sound/punch.smp" type="Sample" id=34]
+[ext_resource path="res://sound/run_square.smp" type="Sample" id=35]
+[ext_resource path="res://sound/shot_1.smp" type="Sample" id=36]
+[ext_resource path="res://sound/spawn_1.smp" type="Sample" id=37]
+[ext_resource path="res://sound/square_base_phone.smp" type="Sample" id=38]
+[ext_resource path="res://sound/strongest_square.smp" type="Sample" id=39]
+[ext_resource path="res://sound/theme_1.smp" type="Sample" id=40]
+[ext_resource path="res://sound/three_headed_2.smp" type="Sample" id=41]
+[ext_resource path="res://sound/timeout.smp" type="Sample" id=42]
+[ext_resource path="res://sound/too_mighty.smp" type="Sample" id=43]
+[ext_resource path="res://sound/wilhem.smp" type="Sample" id=44]
+[ext_resource path="res://sound/you_lose.smp" type="Sample" id=45]
+[ext_resource path="res://sound/you_win.smp" type="Sample" id=46]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 3.5
+height = 6.0
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "climb"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11, 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("collision:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:texture")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:transform/scale")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "die"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 55 ), Vector2( -80, 15 ), Vector2( -120, 55 ), Vector2( -160, 15 ), Vector2( -160, 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:shape:radius")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 3.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:transform/pos")
+tracks/3/interp = 2
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -80, -40 ), Vector2( -120, 0 ), Vector2( -160, -40 ), Vector2( -160, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:texture")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:visibility/opacity")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.6 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 72 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11, 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 3.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("collision:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:transform/scale")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:texture")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11, 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("collision:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:texture")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 7 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:transform/scale")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11, 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("collision:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:texture")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 9 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:transform/scale")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("collision:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("collision:transform/scale")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11, 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("collision:shape:height")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("collision:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite:texture")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprite:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprite:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprite:transform/scale")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="SampleLibrary" id=8]
+
+samples/all_your_flag = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 12 )
+}
+samples/arg = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 13 )
+}
+samples/choco = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 14 )
+}
+samples/dead_squares = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 15 )
+}
+samples/death_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 16 )
+}
+samples/en_taro_square_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 17 )
+}
+samples/explosion = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 18 )
+}
+samples/fall_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 19 )
+}
+samples/flag_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 20 )
+}
+samples/goal_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 21 )
+}
+samples/hadouken = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 22 )
+}
+samples/hasta_la_vista = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 23 )
+}
+samples/hit1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 24 )
+}
+samples/hit2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 25 )
+}
+samples/i_am_your_square_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 26 )
+}
+samples/james_square = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 27 )
+}
+samples/jump_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 28 )
+}
+samples/kippee_ya_kai_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 29 )
+}
+samples/kippee_yi_kay = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 30 )
+}
+samples/more_squares = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 31 )
+}
+samples/my_square = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 32 )
+}
+samples/powerup = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 33 )
+}
+samples/punch = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 34 )
+}
+samples/run_square = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 35 )
+}
+samples/shot_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 36 )
+}
+samples/spawn_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 37 )
+}
+samples/square_base_phone = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 38 )
+}
+samples/strongest_square = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 39 )
+}
+samples/theme_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 40 )
+}
+samples/three_headed_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 41 )
+}
+samples/timeout = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 42 )
+}
+samples/too_mighty = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 43 )
+}
+samples/wilhem = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 44 )
+}
+samples/you_lose = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 45 )
+}
+samples/you_win = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 46 )
+}
+
+[node name="blue_alien" type="KinematicBody2D" groups=[
+"alien",
+"blue_alien",
+]]
+
+transform/scale = Vector2( 0.25, 0.25 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 11, 0, 0, 11, 0, 55 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0, 55 )
+transform/scale = Vector2( 11, 11 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="right_foot" type="RayCast2D" parent="."]
+
+transform/pos = Vector2( 0, 126 )
+enabled = true
+cast_to = Vector2( 0, 20 )
+layer_mask = 1
+type_mask = 7
+
+[node name="player" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/climb = SubResource( 2 )
+anims/die = SubResource( 3 )
+anims/duck = SubResource( 4 )
+anims/jump = SubResource( 5 )
+anims/stand = SubResource( 6 )
+anims/walk = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="audio" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 8 )
+config/pitch_random = 0.0
+
+[node name="fade_effect" type="Tween" parent="."]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="tween_complete" from="fade_effect" to="." method="_on_fade_effect_tween_complete"]
+
+
